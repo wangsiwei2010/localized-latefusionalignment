@@ -70,10 +70,10 @@ for i = 1:12
         neibournum = round(tauset9(it)*num);
         NS = genarateNeighborhood(avgKer,neibournum);
         A = calculateA(NS,neibournum);
-        localavg = calculatelocalH(H0,A);
+        localavg = calculatelocalH(H0,A);i
         localH = zeros(num,numclass,numker);
         for i =1:numker
-            index = genarateNeighborhood(KH(:,:,p),neibournum);
+            index = genarateNeighborhood(KH(:,:,i),neibournum);
             s = calculateA(index,neibournum);
             localH(:,:,i) = calculatelocalH(HP(:,:,i),s);
         end
